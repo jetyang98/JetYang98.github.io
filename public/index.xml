@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jet Yang&#39;s Blog</title>
+    <link>http://localhost/</link>
+    <description>Recent content on Jet Yang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 06 Aug 2021 23:55:31 +0800</lastBuildDate><atom:link href="http://localhost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Pages</title>
+      <link>http://localhost/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/github-pages/</link>
+      <pubDate>Fri, 06 Aug 2021 23:55:31 +0800</pubDate>
+      
+      <guid>http://localhost/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/github-pages/</guid>
+      <description>GitHub pages相当于自己的网站，域名为&amp;lt;username&amp;gt;.github.io。
+Github pages支持html格式的文件和markdown格式的文件。入口文件为index.html或index.md。
+概述例子使用markdown文件，并且用loppo工具来生成html文件。使用GitHub Actions自动化执行生成html文件操作，并且自动部署到docs分支下。
+使用loppo的主要原因是它可以自动生成索引，不需要自己写一个文件作为索引。
+流程 在master分支下编写loppo.yml、.github/workflows/&amp;lt;自定义文件名&amp;gt;.yml文件，使用npm init生成package.json文件。 在docs文件夹下编写markdown文件。 Push到GitHub，自动执行Actions。  配置文件介绍loppo.ymldir:docs# 源文件夹output:dist# 目标文件夹site:Documentstheme:oceandeepcustomization:falsethemeDir:loppo-themedirection:ltrid:JetYang98.github.iopackage.json使用npm init命令生成。注意添加dependencies属性。
+{ &amp;#34;name&amp;#34;: &amp;#34;jetyang98.github.io&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;1.0.0&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;main&amp;#34;: &amp;#34;index.js&amp;#34;, &amp;#34;directories&amp;#34;: { &amp;#34;doc&amp;#34;: &amp;#34;docs&amp;#34; }, &amp;#34;scripts&amp;#34;: { &amp;#34;build&amp;#34;: &amp;#34;loppo&amp;#34; }, &amp;#34;repository&amp;#34;: { &amp;#34;type&amp;#34;: &amp;#34;git&amp;#34;, &amp;#34;url&amp;#34;: &amp;#34;git+https://github.com/jetyang98/JetYang98.github.io.git&amp;#34; }, &amp;#34;author&amp;#34;: &amp;#34;Jet Yang&amp;#34;, &amp;#34;license&amp;#34;: &amp;#34;Apache&amp;#34;, &amp;#34;bugs&amp;#34;: { &amp;#34;url&amp;#34;: &amp;#34;https://github.</description>
+    </item>
+    
+    <item>
+      <title>Github Actions</title>
+      <link>http://localhost/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/github-actions/</link>
+      <pubDate>Fri, 06 Aug 2021 23:54:36 +0800</pubDate>
+      
+      <guid>http://localhost/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/github-actions/</guid>
+      <description>GitHub actions是一个非常好用的自动化工具，可以在满足某种条件下，自动执行某些任务。比如当代码push到master时，在Ubuntu平台下执行node.js脚本等。
+如何使用创建工作流在GitHub网页上点击Actions创建一个新的工作流。
+模板介绍name:CI# 任务触发条件on:# 当push到master时触发push:branches:[master ]# 当pr到master时触发pull_request:branches:[master ]# Allows you to run this workflow manually from the Actions tabworkflow_dispatch:# A workflow run is made up of one or more jobs that can run sequentially or in paralleljobs:build-pages:# 该job运行平台runs-on:ubuntu-latest# Steps represent a sequence of tasks that will be executed as part of the jobsteps:# Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it- uses:actions/checkout@v2# 安装node.</description>
+    </item>
+    
+  </channel>
+</rss>
