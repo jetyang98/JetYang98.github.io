@@ -3,13 +3,13 @@ title: "Github Actions"
 date: 2021-08-06T23:54:36+08:00
 ---
 
-GitHub actions是一个非常好用的自动化工具，可以在满足某种条件下，自动执行某些任务。比如当代码push到master时，在Ubuntu平台下执行node.js脚本等。
+GitHub Actions 是一个非常好用的自动化工具，可以在满足某种条件下，自动执行某些任务。比如当代码 push 到 master 时，在 Ubuntu 平台下执行 node.js 脚本等。
 
 ## 如何使用
 
 ### 创建工作流
 
-在GitHub网页上点击`Actions`创建一个新的工作流。
+在 GitHub 网页上点击 Actions 创建一个新的工作流。
 
 ### 模板介绍
 
