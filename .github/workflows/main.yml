@@ -1,4 +1,4 @@
-name: github pages
+name: Github Pages
 
 on:
   push:
@@ -10,21 +10,18 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
         with:
-          hugo-version: 'latest'
-          # extended: true
+          node-version: '16'
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: |
+          npm install -g yarn
+          yarn install --frozen-lockfile --non-interactive
 
       - name: Build
-        run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          publish_branch: docs
+        run: |
+          yarn build
