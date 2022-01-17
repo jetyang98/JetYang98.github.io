@@ -12,7 +12,7 @@ import _ from 'lodash';
 export default {
   data() {
     return {
-      input: '# hello'
+      input: ''
     }
   },
   computed: {
